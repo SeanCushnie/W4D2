@@ -50,6 +50,6 @@ def delete(id):
 
 
 def update(artist):
-    sql = "UPDATE artists SET artist_name = (%s) WHERE id = %s"
+    sql = "UPDATE artists SET artist_name = %s WHERE id = %s"
     values = [artist.artist_name, artist.id]
     run_sql(sql, values)
